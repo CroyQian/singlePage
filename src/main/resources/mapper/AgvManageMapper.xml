@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qp.dao.AgvManageMapper">
+    <resultMap id="agvResultMap" type="com.qp.pojo.Agv">
+        <id property="agvid" column="agvid"></id>
+        <result property="agvName" column="agvName"></result>
+        <result property="agvStatus" column="agvStatus"></result>
+        <result property="isUsed" column="isUsed"></result>
+        <result property="location" column="location"></result>
+        <result property="batteryCapacity" column="batteryCapacity"></result>
+        <result property="agvIP" column="agvIP"></result>
+        <result property="agvTask" column="agvTask"></result>
+        <result property="area" column="area"></result>
+        <result property="isTest" column="isTest"></result>
+    </resultMap>
+    <select id="findAllAgv" resultMap="agvResultMap">
+        SELECT agvid,agvName,agvStatus,isUsed,location,batteryCapacity,agvIP,agvTask,area,isTest FROM test1.agvmanage
+    </select>
+</mapper>
